@@ -9,14 +9,16 @@ namespace Comp_Laba1
     public class DocumentTab
     {
         public string FileName { get; set; }
+        public string FilePath { get; set; }
         public string TextContent { get; set; }
         public bool IsModified { get; set; }
         public int CurrentVersionIndex { get; set; }
         public bool CanRedo { get; private set; }
 
-        public DocumentTab(string filePath = "")
+        public DocumentTab(string fileName = "", string filePath = "")
         {
-            FileName = filePath;
+            FileName = fileName;
+            FilePath = filePath;
             TextContent = "";
             IsModified = false;
             CurrentVersionIndex = 0;
